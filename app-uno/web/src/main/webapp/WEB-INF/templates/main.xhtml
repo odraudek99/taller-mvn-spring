@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:sec="http://www.springframework.org/security/tags">
+<f:view contentType="text/html">
+	<h:head>
+		<f:facet name="first">
+			<meta content='text/html; charset=UTF-8' http-equiv="Content-Type" />
+			<title><ui:insert name="titulo">Bienvenido</ui:insert> - SCMV.</title>
+		</f:facet>
+		<!-- <h:outputStylesheet name="style-min.css" library="css" />
+		<h:outputScript name="global-min.js" library="script" /> -->
+		<ui:insert name="script" />
+		<ui:insert name="estilos" />
+	</h:head>
+	<h:body>
+		<p:growl autoUpdate="true" />
+		<p:ajaxStatus onstart="ajaxStatusDialog.show();"
+			onsuccess="ajaxStatusDialog.hide();" />
+		<p:dialog modal="true" widgetVar="ajaxStatusDialog" header="Cargando"
+			draggable="false" closable="false">
+			<h:graphicImage library="image" name="ajaxloadingbar.gif" alt="Logo" />
+		</p:dialog>
+
+		<p:layout fullPage="true" stateful="true">
+			<p:layoutUnit position="center" header="#{titulo}">
+			<ui:insert name="titulo"></ui:insert>
+				<p:panel>
+					<ui:insert name="contenido"></ui:insert>
+				</p:panel>
+			</p:layoutUnit>
+			
+			
+		</p:layout>
+	</h:body>
+</f:view>
+</html>

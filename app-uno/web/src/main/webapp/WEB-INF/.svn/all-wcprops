@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/expo/!svn/ver/2/trunk/app-uno/web/src/main/webapp/WEB-INF
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/expo/!svn/ver/2/trunk/app-uno/web/src/main/webapp/WEB-INF/web.xml
+END
+faces-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/expo/!svn/ver/2/trunk/app-uno/web/src/main/webapp/WEB-INF/faces-config.xml
+END

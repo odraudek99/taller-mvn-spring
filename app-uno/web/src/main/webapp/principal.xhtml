@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	template="/WEB-INF/templates/main.xhtml">
+	<ui:param name="titulo" value="hi." />
+	<ui:define name="css">
+	</ui:define>
+
+	<ui:define name="contenido">
+
+
+		<h:form>
+
+			<h:panelGrid columns="2">
+
+				<h:outputText value="Hi" />
+
+				<p:inputText id="actual" required="true"
+					requiredMessage="La contraseña actual es obligatoria."
+					value="#{principalController.texto}" />
+				<p:commandButton value="saludar"
+					actionListener="#{principalController.saluda}" update="@form" />
+					
+				<p:commandButton value="saludar Jar"
+					actionListener="#{principalController.saludaDos}" update="@form" />
+				<h:outputText />
+
+				<h:outputText value="#{principalController.saludo}" />
+
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>
