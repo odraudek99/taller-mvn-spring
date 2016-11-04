@@ -28,6 +28,14 @@ public class PrincipalController implements Serializable {
 		texto = "hola";
 	}
 
+	public String testMB(String nombre) {
+		return "test mb "+nombre;
+	}
+	
+	public String testMB2(String nombre) {
+		return negocioUno.saluda(nombre);
+	}
+	
 	public void saluda() {
 		this.saludo =negocioUno.saluda(texto);
 	}

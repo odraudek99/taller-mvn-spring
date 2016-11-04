@@ -12,9 +12,11 @@ import mx.com.corp.jar.pack.impl.BeanJarImpl;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 //@ContextConfiguration(locations={"classpath:test/spring-test.xml"})
-@ContextConfiguration(classes = {AppConfig.class})
-public class TestClass {
+@ContextConfiguration(locations={"classpath:test/spring-test.xml"})
+//@ContextConfiguration(classes = {AppConfig.class})
+public class TestJar {
 	
+
 	@Autowired
 	BeanJar beanJar;
 	
@@ -27,6 +29,12 @@ public class TestClass {
 
     }
 
-	
+	public BeanJar getBeanJar() {
+		return beanJar;
+	}
+
+	public void setBeanJar(BeanJar beanJar) {
+		this.beanJar = beanJar;
+	}	
 
 }
